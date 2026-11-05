@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gyttja Enterprises | Soil Amendment from River &amp; Lake Sediment</title>
+<meta name="description" content="Gyttja Enterprises turns dredged river and lake sediment into soil amendments and topsoil for farms, nurseries and landscapers. More organic matter, better water holding, looser soil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --silt:#8B6B4A;
+    --silt-dark:#5E4630;
+    --slate:#3E5566;
+    --slate-dark:#26363F;
+    --signal:#E8702A;
+    --signal-dark:#C25A1C;
+    --leaf:#5C7A3A;
+    --cream:#F4EFE6;
+    --paper:#FBF8F2;
+    --ink:#1F2A30;
+    --muted:#5B6870;
+    --line:#DED5C6;
+    --radius:14px;
+    --max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15;color:var(--slate-dark)}
+  a{color:var(--slate)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  section{padding:88px 0}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--signal-dark);margin-bottom:14px}
+  .lead{font-size:19px;color:var(--muted);max-width:720px}
+  .btn{display:inline-block;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;transition:transform .15s,background .15s;border:2px solid transparent;cursor:pointer}
+  .btn-primary{background:var(--signal);color:#fff}
+  .btn-primary:hover{background:var(--signal-dark);transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--cream);color:var(--cream)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+  .head{margin-bottom:48px}
+  .head h2{font-size:clamp(30px,4vw,44px);margin-bottom:14px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,248,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+  .brand-name{font-family:'Fraunces',serif;font-weight:800;font-size:20px;letter-spacing:.02em}
+  .brand-name span{color:var(--silt)}
+  .brand-sub{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav a{text-decoration:none;color:var(--ink);font-size:14.5px;font-weight:500}
+  nav a:hover{color:var(--signal-dark)}
+  .nav-cta{padding:10px 18px;font-size:14px}
+  @media(max-width:880px){nav ul{display:none}}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--slate-dark) 0%,var(--silt-dark) 62%,var(--silt) 100%);color:var(--cream);padding:110px 0 0;position:relative;overflow:hidden}
+  .hero h1{color:#fff;font-size:clamp(38px,6vw,64px);max-width:880px}
+  .hero h1 em{font-style:normal;color:#F6B98E}
+  .hero .lead{color:#E3DACB;margin:24px 0 36px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+  .strata{display:block;width:100%;height:120px;margin-top:80px}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;max-width:840px;border-top:1px solid rgba(255,255,255,.2);padding-top:28px}
+  .hero-stats b{display:block;font-family:'Fraunces',serif;font-size:32px;color:#fff}
+  .hero-stats span{font-size:13.5px;color:#D9CFBF}
+  @media(max-width:640px){.hero-stats{grid-template-columns:1fr}}
+
+  /* Cards & grids */
+  .grid{display:grid;gap:22px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.g3,.g2,.g4{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card h3{font-size:21px;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15.5px}
+  .icon{width:46px;height:46px;border-radius:12px;background:var(--cream);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .icon svg{width:24px;height:24px;stroke:var(--silt-dark);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Benefits */
+  #benefits{background:var(--cream)}
+
+  /* Products */
+  .product{display:flex;flex-direction:column;border-top:5px solid var(--silt)}
+  .product.p2{border-top-color:var(--leaf)}
+  .product.p3{border-top-color:var(--signal)}
+  .product .tag{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .product ul{list-style:none;margin-top:16px;display:grid;gap:8px}
+  .product li{font-size:14.5px;color:var(--ink);padding-left:22px;position:relative}
+  .product li::before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:50%;background:var(--silt)}
+  .product.p2 li::before{background:var(--leaf)}
+  .product.p3 li::before{background:var(--signal)}
+  .quiet{margin-top:26px;font-size:14px;color:var(--muted);text-align:center}
+
+  /* Growers */
+  .grower .pri{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-bottom:12px}
+  .p-a{background:#FBE3D3;color:var(--signal-dark)}
+  .p-b{background:#E6EEDC;color:var(--leaf)}
+  .p-c{background:#E3EBEF;color:var(--slate)}
+
+  /* How to use */
+  #apply{background:var(--slate-dark);color:var(--cream)}
+  #apply h2,#apply h3{color:#fff}
+  #apply .lead{color:#C9D4D9}
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr}}
+  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-top:4px solid var(--signal);border-radius:12px;padding:22px}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:'Fraunces',serif;font-weight:800;font-size:26px;color:#F6B98E;display:block;margin-bottom:8px}
+  .step h3{font-size:18px;margin-bottom:6px}
+  .step p{font-size:14.5px;color:#C9D4D9}
+
+  /* Evidence */
+  .ev{display:flex;flex-direction:column}
+  .ev .src{margin-top:auto;padding-top:16px;font-size:13.5px}
+  .ev .src a{font-weight:600}
+
+  /* Source */
+  #source{background:var(--cream)}
+  .source-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+  @media(max-width:860px){.source-wrap{grid-template-columns:1fr}}
+  .source-list{list-style:none;display:grid;gap:12px}
+  .source-list li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .source-list b{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--slate-dark)}
+  .source-list span{font-size:14px;color:var(--muted)}
+
+  /* Calculator */
+  .calc{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px}
+  @media(max-width:880px){.calc{grid-template-columns:1fr;padding:22px}}
+  .field{margin-bottom:20px}
+  .field label{display:flex;justify-content:space-between;font-weight:600;font-size:14.5px;margin-bottom:8px}
+  .field label output{color:var(--signal-dark);font-weight:700}
+  .field small{display:block;color:var(--muted);font-size:12.5px;margin-top:4px}
+  input[type=range]{width:100%;accent-color:var(--signal)}
+  .results{background:var(--slate-dark);color:var(--cream);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px}
+  .r{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:12px;gap:12px}
+  .r span{font-size:14px;color:#C9D4D9}
+  .r b{font-family:'Fraunces',serif;font-size:22px;color:#fff;white-space:nowrap}
+  .r.big b{font-size:34px;color:#F6B98E}
+  .verdict{background:rgba(255,255,255,.07);border-radius:10px;padding:14px;font-size:14px;color:#E2E8EB}
+  .disclaimer{font-size:12.5px;color:#9FB0B8}
+
+  /* FAQ */
+  #faq{background:var(--cream)}
+  details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+  summary{font-weight:700;cursor:pointer;font-size:16.5px;color:var(--slate-dark);list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--signal-dark);font-size:22px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:10px;color:var(--muted);font-size:15.5px}
+
+  /* Contact */
+  #contact{background:linear-gradient(160deg,var(--silt-dark),var(--slate-dark));color:var(--cream)}
+  #contact h2{color:#fff}
+  #contact .lead{color:#D9E2E6}
+  .cform{background:#fff;border-radius:16px;padding:30px;color:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+  @media(max-width:700px){.cform{grid-template-columns:1fr}}
+  .cform .full{grid-column:1/-1}
+  .cform label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+  .cform input,.cform select,.cform textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:15px;background:var(--paper)}
+  .cform textarea{min-height:110px;resize:vertical}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--signal);border-color:transparent}
+  .cform .note{font-size:12.5px;color:var(--muted)}
+
+  /* Footer */
+  footer{background:#141C20;color:#9FB0B8;padding:44px 0;font-size:13.5px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-start}
+  .legal{max-width:640px;line-height:1.55}
+  .legal strong{color:#DCE3E6}
+  footer a{color:#C9D4D9}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Gyttja Enterprises home">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#26363F"/>
+        <path d="M3 17 Q11 13 20 17 T37 17 L37 22 L3 22Z" fill="#3E5566"/>
+        <path d="M3 22 L37 22 L36 27 L4 27Z" fill="#8B6B4A"/>
+        <path d="M4 27 L36 27 L33 32 L7 32Z" fill="#5E4630"/>
+        <path d="M7 32 L33 32 Q27 38 20 38 Q13 38 7 32Z" fill="#E8702A"/>
+      </svg>
+      <div>
+        <span class="brand-name">GYTTJA<span> ENTERPRISES</span></span>
+        <span class="brand-sub">Soil Built From Sediment</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#apply">How to Use</a></li>
+        <li><a href="#evidence">Research</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn btn-primary nav-cta">Request a Quote</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#F6B98E">Soil Amendment &amp; Topsoil for Growers</span>
+    <h1>Put back the soil your fields lost. <em>Grow in it again.</em></h1>
+    <p class="lead">Every heavy rain carries topsoil off the land and into rivers and lakes, where it settles as rich, fine sediment. Gyttja Enterprises recovers that sediment from scheduled dredging projects and turns it into amendments and topsoil that add organic matter, hold more water and loosen tired ground.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn btn-primary">See the Products</a>
+      <a href="#evidence" class="btn btn-ghost">Read the Research</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>2–6%</b><span>organic matter in Illinois River backwater sediment, close to good Illinois topsoil</span></div>
+      <div><b>4 years</b><span>of university field plots showing higher corn yields on sediment-amended sand</span></div>
+      <div><b>Recovered</b><span>from scheduled dredging, not new mining or stripped farmland</span></div>
+    </div>
+  </div>
+  <svg class="strata" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 40 Q360 10 720 40 T1440 40 V120 H0Z" fill="#8B6B4A" opacity=".55"/>
+    <path d="M0 70 Q360 45 720 70 T1440 70 V120 H0Z" fill="#5E4630" opacity=".75"/>
+    <path d="M0 95 Q360 80 720 95 T1440 95 V120 H0Z" fill="#F4EFE6"/>
+  </svg>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What It Does for Your Soil</span>
+      <h2>Structure first. Yield follows.</h2>
+      <p class="lead">Sediment is eroded topsoil coming back home. Worked into your ground, it builds the parts of soil health that fertilizer alone can't supply.</p>
+    </div>
+    <div class="grid g4">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 22V12"/><path d="M12 12c0-4 3-7 7-7 0 4-3 7-7 7z"/><path d="M12 15c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5z"/></svg></div>
+        <h3>More organic matter</h3>
+        <p>Research blends raised soil organic matter, the base of a living, productive soil.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div>
+        <h3>Better water holding</h3>
+        <p>Fine silts and clays give sandy ground the moisture storage it lacks between rains.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M6 17V9"/><path d="M12 17V5"/><path d="M18 17v-6"/></svg></div>
+        <h3>Looser, lighter soil</h3>
+        <p>Lower bulk density means easier root growth and less compaction to fight.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></div>
+        <h3>Nutrient holding</h3>
+        <p>Higher cation exchange capacity and calcium help soil hold onto the nutrients you apply.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Products</span>
+      <h2>Three ways to put it to work</h2>
+      <p class="lead">Every product starts as dewatered, screened sediment. What changes is how it's finished and who it's built for.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card product">
+        <span class="tag">Bulk · By the ton</span>
+        <h3>Field Amendment</h3>
+        <p>Dewatered sediment for broad-acre application on sandy, eroded or worn-out ground.</p>
+        <ul>
+          <li>Spreads with standard manure spreaders</li>
+          <li>Typical rates of 1–3 inches, worked in</li>
+          <li>Built for row crops, pasture and hay</li>
+        </ul>
+      </div>
+      <div class="card product p2">
+        <span class="tag">Bulk · By the yard</span>
+        <h3>Screened Topsoil</h3>
+        <p>Weathered and screened to a loose, plantable topsoil for building beds and finishing sites.</p>
+        <ul>
+          <li>Nurseries, landscapers and turf</li>
+          <li>Raised beds and new plantings</li>
+          <li>Site restoration and reclamation</li>
+        </ul>
+      </div>
+      <div class="card product p3">
+        <span class="tag">Bulk or bagged</span>
+        <h3>Compost Blend</h3>
+        <p>Sediment blended with compost for a richer, more biologically active growing mix.</p>
+        <ul>
+          <li>Vegetable and specialty growers</li>
+          <li>Container and greenhouse mixes</li>
+          <li>Garden centers and home growers</li>
+        </ul>
+      </div>
+    </div>
+    <p class="quiet">Every lot is lab-tested. Reports are available on request.</p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="growers" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Who It's For</span>
+      <h2>Best results where soil needs it most</h2>
+    </div>
+    <div class="grid g4">
+      <div class="card grower"><span class="pri p-a">Strongest Fit</span><h3>Sandy &amp; Marginal Farmland</h3><p>The biggest yield responses in the research came from adding sediment to sandy soils.</p></div>
+      <div class="card grower"><span class="pri p-b">Strong Fit</span><h3>Vegetable &amp; Specialty Growers</h3><p>High-value crops on small acreage, where better soil pays back fastest.</p></div>
+      <div class="card grower"><span class="pri p-b">Strong Fit</span><h3>Nurseries &amp; Landscapers</h3><p>A steady supply of screened topsoil in regions where good topsoil is expensive.</p></div>
+      <div class="card grower"><span class="pri p-c">Growing</span><h3>Row Crops at Scale</h3><p>Broad-acre corn and soybeans near river terminals, where freight costs stay low.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section id="apply">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="color:#F6B98E">How to Use It</span>
+      <h2>From delivery to first crop</h2>
+      <p class="lead">Sediment works alongside your fertility program. It doesn't replace it. Think of it as rebuilding the foundation, then farming it as usual.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Test your soil</h3><p>Start with a standard soil test so you know your organic matter, pH and nutrient levels before you add anything.</p></div>
+      <div class="step"><h3>Pick a rate</h3><p>Thin rates of 1–2 inches suit most fields. Very sandy ground responds to heavier layers.</p></div>
+      <div class="step"><h3>Spread &amp; work in</h3><p>Spread with a manure spreader or loader, then disk or till it into the top few inches.</p></div>
+      <div class="step"><h3>Plant &amp; adjust</h3><p>Plant as normal and adjust your fertilizer to the next soil test. Many fields need less over time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section id="evidence">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">The Research</span>
+      <h2>Decades of field and greenhouse results</h2>
+      <p class="lead">Universities and state programs have grown crops in dredged sediment for decades. Here's what they found.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card ev">
+        <h3>Ohio demonstration farm</h3>
+        <p>Researchers spread Lake Erie harbor sediment on working fields and reported improved soil health and higher crop yields. The added material also offset compaction from heavy equipment.</p>
+        <p class="src"><a href="https://ohioseagrant.osu.edu/news/2026/rscz7/can-dredged-sediments-benefit-crops-mitigate-algal-blooms" target="_blank" rel="noopener">Ohio Sea Grant, 2026 →</a></p>
+      </div>
+      <div class="card ev">
+        <h3>Soil health in greenhouse trials</h3>
+        <p>Blending dredged sediment into farm soil raised organic matter, cation exchange capacity and calcium and lowered bulk density. Soybean biomass and yields rose with higher sediment ratios.</p>
+        <p class="src"><a href="https://WWW.BGSU.EDU/content/dam/BGSU/college-of-arts-and-sciences/earth-environment-and-society/documents/Brigham-et-al-2021(1).pdf" target="_blank" rel="noopener">Brigham et al., BGSU, 2021 →</a></p>
+      </div>
+      <div class="card ev">
+        <h3>Four years on sandy soil</h3>
+        <p>University of Illinois plots topped Plainfield sand with Illinois River sediment. Corn showed higher growth and grain yields, and soybeans grew more vigorously too.</p>
+        <p class="src"><a href="https://ideals.illinois.edu/items/102877" target="_blank" rel="noopener">Darmody &amp; Diaz, 2017 →</a></p>
+      </div>
+      <div class="card ev">
+        <h3>Vegetables in the open field</h3>
+        <p>Lettuce, radish and tomato trials with Lake Erie sediment showed positive crop responses in an open-field production system.</p>
+        <p class="src"><a href="https://bgsu.edu/content/dam/BGSU/college-of-arts-and-sciences/earth-environment-and-society/documents/sequeira-2024b.pdf" target="_blank" rel="noopener">Sequeira et al., 2024 →</a></p>
+      </div>
+      <div class="card ev">
+        <h3>Topsoil-grade properties</h3>
+        <p>Peoria Lakes sediment is mostly silt and clay with about 2–6% organic matter and a pH of 7 or higher, comparable to quality Illinois topsoil.</p>
+        <p class="src"><a href="https://core.ac.uk/download/158323916.pdf" target="_blank" rel="noopener">Marlin &amp; Darmody, ISTC TR-068, 2018 →</a></p>
+      </div>
+      <div class="card ev">
+        <h3>Mud to Parks</h3>
+        <p>About 105,000 tons of Peoria Lake sediment went by barge to a bare Chicago slag field. It weathered into loose soil that now grows grass, prairie and trees.</p>
+        <p class="src"><a href="https://blog.istc.illinois.edu/?p=4261" target="_blank" rel="noopener">Illinois Sustainable Technology Center →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE IT COMES FROM -->
+<section id="source">
+  <div class="wrap source-wrap">
+    <div>
+      <span class="eyebrow">Where It Comes From</span>
+      <h2 style="font-size:clamp(28px,3.6vw,40px);margin-bottom:14px">Sediment that's already being dug up</h2>
+      <p class="lead">Lakes, lagoons and river channels across the country are dredged on a schedule to keep water moving and boats afloat. Most of that material is simply stockpiled. We partner with the agencies and contractors already doing the work, so nothing is dug up just for us.</p>
+    </div>
+    <ul class="source-list">
+      <li><b>Florida lakes &amp; lagoons</b><span>Organic-rich muck from lake and estuary restoration projects</span></li>
+      <li><b>Midwest river backwaters</b><span>Silt and clay sediment close to native topsoil</span></li>
+      <li><b>Great Lakes harbors</b><span>Material from routine navigation dredging</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Field Calculator</span>
+      <h2>Run your own numbers</h2>
+      <p class="lead">See what an application costs and what it would need to return to pay off. Change any input to match your ground and your quote.</p>
+    </div>
+    <div class="calc">
+      <div>
+        <div class="field">
+          <label for="acres">Acres treated <output id="acresO"></output></label>
+          <input type="range" id="acres" min="1" max="1000" step="1" value="40">
+        </div>
+        <div class="field">
+          <label for="depth">Application depth <output id="depthO"></output></label>
+          <input type="range" id="depth" min="0.5" max="6" step="0.5" value="2">
+          <small>1 inch over an acre ≈ 134 cubic yards.</small>
+        </div>
+        <div class="field">
+          <label for="cost">Delivered &amp; spread cost <output id="costO"></output></label>
+          <input type="range" id="cost" min="5" max="40" step="1" value="16">
+          <small>Per cubic yard, including freight. Distance drives this number.</small>
+        </div>
+        <div class="field">
+          <label for="credit">Program credit or incentive <output id="creditO"></output></label>
+          <input type="range" id="credit" min="0" max="20" step="1" value="6">
+          <small>Per cubic yard from cost-share or conservation programs. Use $0 if none.</small>
+        </div>
+        <div class="field">
+          <label for="rev">Crop revenue per acre <output id="revO"></output></label>
+          <input type="range" id="rev" min="300" max="5000" step="50" value="700">
+          <small>Row crops run lower. Vegetables and specialty crops run much higher.</small>
+        </div>
+        <div class="field">
+          <label for="yield">Expected yield gain <output id="yieldO"></output></label>
+          <input type="range" id="yield" min="0" max="40" step="1" value="15">
+          <small>Sandy and worn-out soils respond most. Good soils may see little gain.</small>
+        </div>
+        <div class="field">
+          <label for="fert">Annual fertilizer spend per acre <output id="fertO"></output></label>
+          <input type="range" id="fert" min="50" max="400" step="10" value="180">
+        </div>
+        <div class="field">
+          <label for="cut">Fertilizer reduction <output id="cutO"></output></label>
+          <input type="range" id="cut" min="0" max="40" step="1" value="10">
+          <small>Sediment supplements your fertility program. It doesn't replace yearly nitrogen.</small>
+        </div>
+      </div>
+      <div class="results" aria-live="polite">
+        <div class="r"><span>Material needed</span><b id="vol"></b></div>
+        <div class="r"><span>Net cost per acre</span><b id="perAcre"></b></div>
+        <div class="r"><span>Total upfront cost</span><b id="total"></b></div>
+        <div class="r"><span>Annual benefit per acre</span><b id="annual"></b></div>
+        <div class="r big"><span>Simple payback</span><b id="payback"></b></div>
+        <div class="verdict" id="verdict"></div>
+        <p class="disclaimer">Illustrative only. Excludes time value of money, taxes and how long benefits last on your ground. Not agronomic or financial advice. Confirm with a soil test and a certified crop adviser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Questions</span>
+      <h2>Common questions from growers</h2>
+    </div>
+    <details>
+      <summary>Is this the same as topsoil?</summary>
+      <p>Close to it. Most river and lake sediment is topsoil that eroded off the land. Once it's dewatered and weathered, it handles and grows much like native topsoil. Our Screened Topsoil is finished for that use.</p>
+    </details>
+    <details>
+      <summary>Does it replace fertilizer?</summary>
+      <p>No. It improves organic matter, structure and water holding, and it brings some nutrients with it. You'll still need a fertility program, but many growers can fine-tune rates down after follow-up soil tests.</p>
+    </details>
+    <details>
+      <summary>How much should I apply?</summary>
+      <p>Most fields do well with 1–2 inches worked into the topsoil. Very sandy ground can take heavier layers. Start with a soil test and a trial strip, then scale up.</p>
+    </details>
+    <details>
+      <summary>Is it certified organic?</summary>
+      <p>Not yet. Gyttja Enterprises is in development, and certification would come with product launch. Ask us about your certifier's requirements.</p>
+    </details>
+    <details>
+      <summary>How is it delivered?</summary>
+      <p>Bulk by truck, or by barge to river terminals where available, which keeps freight costs down. The Compost Blend will also be offered bagged.</p>
+    </details>
+    <details>
+      <summary>Is it tested?</summary>
+      <p>Yes. Every lot is lab-tested, and reports are available on request.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#F6B98E">Request a Quote</span>
+    <h2 style="font-size:clamp(30px,4vw,44px)">Tell us about your ground</h2>
+    <p class="lead">Growers, landscapers, nurseries, distributors and dredging partners are all welcome. This form opens a pre-filled email in your mail app. Nothing is sent until you hit send.</p>
+    <form class="cform" id="contactForm">
+      <div><label for="name">Name</label><input id="name" required autocomplete="name"></div>
+      <div><label for="org">Farm or business</label><input id="org" autocomplete="organization"></div>
+      <div>
+        <label for="role">I am a…</label>
+        <select id="role">
+          <option>Farmer / grower</option>
+          <option>Vegetable / specialty grower</option>
+          <option>Nursery / landscaper</option>
+          <option>Ag retailer / distributor</option>
+          <option>Dredging or agency partner</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="prod">Interested in</label>
+        <select id="prod">
+          <option>Field Amendment</option>
+          <option>Screened Topsoil</option>
+          <option>Compost Blend</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div><label for="loc">Location</label><input id="loc" placeholder="County, state"></div>
+      <div><label for="size">Acres or volume</label><input id="size" placeholder="e.g. 40 acres or 200 yards"></div>
+      <div class="full"><label for="msg">Tell us about your soil and what you grow</label><textarea id="msg" required></textarea></div>
+      <div class="full" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+        <span class="note">Or email us directly: <a href="mailto:inquiry@gyttjaenterprises.com">inquiry@gyttjaenterprises.com</a></span>
+        <button type="submit" class="btn btn-primary">Open Email</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="legal">
+      <strong>Gyttja Enterprises</strong> is a business concept in development and is not a registered business entity. No products or services are currently offered for sale. All rights to this domain and its content belong to the domain owner. Research summaries link to their original sources, and Gyttja Enterprises is not affiliated with or endorsed by any agency, university or company named on this site.
+    </div>
+    <div>© <span id="yr"></span> Gyttja Enterprises (unregistered)<br><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const money = n => '$' + Math.round(n).toLocaleString();
+  const ids = ['acres','depth','cost','credit','rev','yield','fert','cut'];
+
+  function calc(){
+    const acres=+$('acres').value, depth=+$('depth').value, cost=+$('cost').value,
+          credit=+$('credit').value, rev=+$('rev').value, yld=+$('yield').value,
+          fert=+$('fert').value, cut=+$('cut').value;
+
+    $('acresO').textContent = acres.toLocaleString() + ' ac';
+    $('depthO').textContent = depth + ' in';
+    $('costO').textContent = '$' + cost + ' / yd³';
+    $('creditO').textContent = '$' + credit + ' / yd³';
+    $('revO').textContent = money(rev) + ' / ac';
+    $('yieldO').textContent = yld + '%';
+    $('fertO').textContent = money(fert) + ' / ac';
+    $('cutO').textContent = cut + '%';
+
+    const ydPerAcre = depth/12 * 43560 / 27;
+    const netPerYd = Math.max(cost - credit, 0);
+    const perAcre = ydPerAcre * netPerYd;
+    const annual = rev*yld/100 + fert*cut/100;
+    const payback = annual > 0 ? perAcre/annual : Infinity;
+
+    $('vol').textContent = Math.round(ydPerAcre).toLocaleString() + ' yd³/ac';
+    $('perAcre').textContent = money(perAcre);
+    $('total').textContent = money(perAcre*acres);
+    $('annual').textContent = money(annual);
+    $('payback').textContent = isFinite(payback) ? (payback < 0.1 ? 'Immediate' : payback.toFixed(1) + ' yrs') : 'No payback';
+
+    let v;
+    if(!isFinite(payback)) v = 'With no yield gain or fertilizer savings, the application never pays back. Try a higher-value crop or look for cost-share programs.';
+    else if(payback <= 5) v = 'Strong case. A good candidate for a trial strip after a soil test.';
+    else if(payback <= 12) v = 'Possible on the right ground. A thinner rate, a program credit or a higher-value crop shortens payback.';
+    else v = 'Hard to justify for this crop at these costs. Try a thinner rate or a higher-value use like vegetables or topsoil.';
+    $('verdict').textContent = v;
+  }
+  ids.forEach(i => $(i).addEventListener('input', calc));
+  calc();
+
+  $('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const subject = 'Gyttja quote request: ' + $('prod').value;
+    const body = 'Name: ' + $('name').value +
+      '\nFarm / business: ' + $('org').value +
+      '\nRole: ' + $('role').value +
+      '\nInterested in: ' + $('prod').value +
+      '\nLocation: ' + $('loc').value +
+      '\nAcres / volume: ' + $('size').value +
+      '\n\n' + $('msg').value;
+    window.location.href = 'mailto:inquiry@gyttjaenterprises.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+
+  $('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
