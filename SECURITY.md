@@ -21,3 +21,4 @@ Report issues in this site's code or configuration here. Report issues in GitHub
 ## Maintainer guidance
 
 Never commit passwords, tokens, private keys, or personal information. Keep GitHub secret scanning and push protection enabled. If a credential is exposed, revoke or rotate it immediately; deleting a file alone does not remove it from Git history. Review third-party changes and preserve HTTPS enforcement.
+
